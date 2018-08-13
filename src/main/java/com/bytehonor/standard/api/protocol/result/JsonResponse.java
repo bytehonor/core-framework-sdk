@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 标准Json输出
+ * Standard Json Response
  * 
  * @author lijianqiang
  *
@@ -12,14 +12,14 @@ import java.util.List;
  */
 public final class JsonResponse<T> {
 
-    private Integer code;
+	private Integer code;
 
-    private String message;
-    
-    private List<String> trace = new ArrayList<String>();
+	private String message;
 
-    private T data;
-    
+	private List<String> trace = new ArrayList<String>();
+
+	private T data;
+
 	public int getCode() {
 		return code;
 	}
@@ -43,8 +43,8 @@ public final class JsonResponse<T> {
 	public void setData(T data) {
 		this.data = data;
 	}
-	
-    public List<String> getTrace() {
+
+	public List<String> getTrace() {
 		return trace;
 	}
 
@@ -53,10 +53,10 @@ public final class JsonResponse<T> {
 	}
 
 	@Override
-    public String toString() {
+	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("[code:").append(this.code).append(", message:").append(this.message).append("]");
-    	return sb.toString();
-    }
-    
+		return sb.toString();
+	}
+
 }

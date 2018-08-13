@@ -1,6 +1,5 @@
 package com.bytehonor.standard.api.protocol.error;
 
-
 /**
  * top exception
  * 
@@ -8,9 +7,12 @@ package com.bytehonor.standard.api.protocol.error;
  *
  */
 public class StandardException extends RuntimeException {
-	
+
 	private static final long serialVersionUID = -183184291876365329L;
-	
+
+	/**
+	 * error code
+	 */
 	private int code;
 
 	public StandardException() {

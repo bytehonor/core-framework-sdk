@@ -7,17 +7,17 @@ package com.bytehonor.standard.api.protocol.constant;
  *
  */
 public class HeaderAuthKey {
-	
+
 	/**
 	 * 微信用户openid
 	 */
 	public static final String WECHAT_USER_OPENID = "X-Wechat-User-Openid";
-	
+
 	/**
 	 * 微信用户unid
 	 */
 	public static final String WECHAT_USER_UNID = "X-Wechat-User-Unid";
-	
+
 	/**
 	 * 微信用户token
 	 */
@@ -32,7 +32,7 @@ public class HeaderAuthKey {
 	 * 商家用户token
 	 */
 	public static final String MERCHANT_USER_TOKEN = "X-Merchant-User-Token";
-	
+
 	/**
 	 * 平台用户unid
 	 */

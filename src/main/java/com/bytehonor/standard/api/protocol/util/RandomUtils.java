@@ -2,6 +2,12 @@ package com.bytehonor.standard.api.protocol.util;
 
 import java.util.Random;
 
+/**
+ * Random Utils
+ * 
+ * @author lijianqiang
+ *
+ */
 public class RandomUtils {
 
 	/** 数字与字母字典 */
@@ -16,7 +22,7 @@ public class RandomUtils {
 	 * 
 	 * @param min
 	 * @param max
-	 * @return
+	 * @return 生成的随机数
 	 */
 	public static int getInt(int min, int max) {
 		Random random = new Random(System.nanoTime());
@@ -27,7 +33,8 @@ public class RandomUtils {
 	/**
 	 * 取得随机字符串
 	 * 
-	 * @param len 随机数长度
+	 * @param len
+	 *            随机数长度
 	 * @return 生成的随机数
 	 */
 	public static String getString(final int len) {
