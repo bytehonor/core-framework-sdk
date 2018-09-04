@@ -1,4 +1,4 @@
-package com.bytehonor.standard.api.protocol.util;
+package com.bytehonor.protocol.api.server.util;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.bytehonor.standard.api.protocol.error;
+package com.bytehonor.protocol.api.server.error;
 
 /**
  * top exception

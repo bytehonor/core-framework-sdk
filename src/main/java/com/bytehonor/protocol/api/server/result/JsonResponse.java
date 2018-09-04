@@ -1,4 +1,4 @@
-package com.bytehonor.standard.api.protocol.result;
+package com.bytehonor.protocol.api.server.result;
 
 import java.util.ArrayList;
 import java.util.List;

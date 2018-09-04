@@ -1,10 +1,10 @@
-package com.bytehonor.standard.api.protocol.result;
+package com.bytehonor.protocol.api.server.result;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.bytehonor.standard.api.protocol.result.JsonResponse;
+import com.bytehonor.protocol.api.server.result.JsonResponse;
 
 public class JsonResponseTest {
 

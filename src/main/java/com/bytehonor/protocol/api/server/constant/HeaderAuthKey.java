@@ -1,4 +1,4 @@
-package com.bytehonor.standard.api.protocol.constant;
+package com.bytehonor.protocol.api.server.constant;
 
 /**
  * http鉴权header key

@@ -1,4 +1,4 @@
-package com.bytehonor.standard.api.protocol.code;
+package com.bytehonor.protocol.api.server.code;
 
 /**
  * standard error code
