@@ -1,10 +1,10 @@
-package com.bytehonor.protocol.api.server.util;
+package com.bytehonor.protocol.common.server.util;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.bytehonor.protocol.api.server.util.RandomUtils;
+import com.bytehonor.protocol.common.server.util.RandomUtils;
 
 public class RandomUtilsTest {
 
