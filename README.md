@@ -1,2 +1,2 @@
-# bytehonor java standard
-server api protocol
+# bytehonor protocol
+server common protocol
