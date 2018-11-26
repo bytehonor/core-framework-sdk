@@ -8,10 +8,10 @@ import java.util.UUID;
  * @author lijianqiang
  *
  */
-public class UnidUtils {
+public class GuidUtils {
 
 	/**
-	 * unid by uuid
+	 * guid by uuid
 	 * 
 	 * @return string without '-'
 	 */
@@ -20,7 +20,7 @@ public class UnidUtils {
 	}
 
 	/**
-	 * unid by uuid
+	 * guid by uuid
 	 * 
 	 * @return string with '-'
 	 */
