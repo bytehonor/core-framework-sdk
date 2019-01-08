@@ -1,12 +1,12 @@
-package com.bytehonor.protocol.common.server;
+package com.bytehonor.protocol.core.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServerCommonProtocolApplication {
+public class ServerCoreProtocolApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ServerCommonProtocolApplication.class, args);
+		SpringApplication.run(ServerCoreProtocolApplication.class, args);
 	}
 }

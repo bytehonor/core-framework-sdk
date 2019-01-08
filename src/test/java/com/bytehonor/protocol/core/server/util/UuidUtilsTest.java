@@ -1,10 +1,10 @@
-package com.bytehonor.protocol.common.server.util;
+package com.bytehonor.protocol.core.server.util;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.bytehonor.protocol.common.server.util.UuidUtils;
+import com.bytehonor.protocol.core.server.util.UuidUtils;
 
 public class UuidUtilsTest {
 

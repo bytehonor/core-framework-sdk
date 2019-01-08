@@ -1,10 +1,10 @@
-package com.bytehonor.protocol.common.server.util;
+package com.bytehonor.protocol.core.server.util;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.bytehonor.protocol.common.server.util.MD5Utils;
+import com.bytehonor.protocol.core.server.util.MD5Utils;
 
 public class MD5UtilsTest {
 

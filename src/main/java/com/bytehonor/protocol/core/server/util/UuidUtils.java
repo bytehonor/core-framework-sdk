@@ -1,4 +1,4 @@
-package com.bytehonor.protocol.common.server.util;
+package com.bytehonor.protocol.core.server.util;
 
 import java.util.UUID;
 

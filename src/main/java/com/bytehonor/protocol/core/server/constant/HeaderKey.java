@@ -1,4 +1,4 @@
-package com.bytehonor.protocol.common.server.constant;
+package com.bytehonor.protocol.core.server.constant;
 
 public class HeaderKey {
 

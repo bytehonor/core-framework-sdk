@@ -1,10 +1,10 @@
-package com.bytehonor.protocol.common.server.error;
+package com.bytehonor.protocol.core.server.error;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.bytehonor.protocol.common.server.error.StandardException;
+import com.bytehonor.protocol.core.server.error.StandardException;
 
 public class StandardExceptionTest {
 
