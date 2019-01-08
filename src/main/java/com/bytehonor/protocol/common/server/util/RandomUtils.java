@@ -18,7 +18,7 @@ public class RandomUtils {
 	private static final int LETTER_AND_DIGIT_LENGTH = LETTER_AND_DIGIT.length;
 
 	/**
-	 * 取得随机数
+	 * 取得随机数，左闭右闭
 	 * 
 	 * @param min
 	 * @param max
