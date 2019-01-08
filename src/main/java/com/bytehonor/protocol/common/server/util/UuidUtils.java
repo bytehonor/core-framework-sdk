@@ -8,19 +8,30 @@ import java.util.UUID;
  * @author lijianqiang
  *
  */
-public class GuidUtils {
+public class UuidUtils {
+	
+	private static final char CON = '-';
 
 	/**
-	 * guid by uuid
+	 * uuid by uuid
 	 * 
 	 * @return string without '-'
 	 */
 	public static String getSimple() {
-		return getFull().replaceAll("-", "");
+		String full = getFull();
+		int len = full.length();
+		int count = 0;
+		char[] target = new char[len];
+		for (int i=0;i<len;i++) {
+			if (full.charAt(i) != CON) {
+				target[count++] = full.charAt(i);
+			}
+		}
+		return new String(target, 0, count);
 	}
 
 	/**
-	 * guid by uuid
+	 * guid by uuid, toLowerCase
 	 * 
 	 * @return string with '-'
 	 */
