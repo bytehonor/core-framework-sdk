@@ -1,10 +1,10 @@
 package com.bytehonor.protocol.core.server.result;
 
-public class EmptyResultVO {
+public class StringResultVO {
 	
 	private String result;
 	
-	public EmptyResultVO() {
+	public StringResultVO() {
 		this.result = "OK";
 	}
 
