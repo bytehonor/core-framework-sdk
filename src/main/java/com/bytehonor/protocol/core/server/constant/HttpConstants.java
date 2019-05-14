@@ -2,9 +2,9 @@ package com.bytehonor.protocol.core.server.constant;
 
 public class HttpConstants {
 	
-	public static final String COUNT_KEY = "$count";
+	public static final String COUNT_KEY = "count";
 	
-	public static final String LIMIT_KEY = "$limit";
+	public static final String LIMIT_KEY = "limit";
 	
 	public static final Integer LIMIT_DEF = 20;
 
@@ -12,7 +12,7 @@ public class HttpConstants {
     
     public static final Integer LIMIT_MAX_TOP = 5000;
 
-    public static final String OFFSET_KEY = "$offset";
+    public static final String OFFSET_KEY = "offset";
 
     public static final int OFFSET_DEFAULT = 0;
 
