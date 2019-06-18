@@ -3,8 +3,6 @@ package com.bytehonor.sdk.protocol.common.result;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bytehonor.sdk.protocol.common.code.StandardCode;
-
 /**
  * Standard Json Response
  * 
@@ -21,13 +19,6 @@ public final class JsonResponse<T> {
     private List<String> trace = new ArrayList<String>();
 
     private T data;
-
-    public static <S> JsonResponse<S> feignFallback() {
-        JsonResponse<S> result = new JsonResponse<S>();
-        result.setCode(StandardCode.FEIGN_FALLBACK);
-        result.setMessage("远程服务不可用");
-        return result;
-    }
 
     public int getCode() {
         return code;
