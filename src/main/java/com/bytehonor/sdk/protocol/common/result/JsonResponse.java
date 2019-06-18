@@ -3,6 +3,8 @@ package com.bytehonor.sdk.protocol.common.result;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bytehonor.sdk.protocol.common.code.StandardCode;
+
 /**
  * Standard Json Response
  * 
@@ -12,51 +14,58 @@ import java.util.List;
  */
 public final class JsonResponse<T> {
 
-	private Integer code;
+    private Integer code;
 
-	private String message;
+    private String message;
 
-	private List<String> trace = new ArrayList<String>();
+    private List<String> trace = new ArrayList<String>();
 
-	private T data;
+    private T data;
 
-	public int getCode() {
-		return code;
-	}
+    public static <S> JsonResponse<S> feignFallback() {
+        JsonResponse<S> result = new JsonResponse<S>();
+        result.setCode(StandardCode.FEIGN_FALLBACK);
+        result.setMessage("远程服务不可用");
+        return result;
+    }
 
-	public void setCode(Integer code) {
-		this.code = code;
-	}
+    public int getCode() {
+        return code;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public void setCode(Integer code) {
+        this.code = code;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	public T getData() {
-		return data;
-	}
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-	public void setData(T data) {
-		this.data = data;
-	}
+    public T getData() {
+        return data;
+    }
 
-	public List<String> getTrace() {
-		return trace;
-	}
+    public void setData(T data) {
+        this.data = data;
+    }
 
-	public void setTrace(List<String> trace) {
-		this.trace = trace;
-	}
+    public List<String> getTrace() {
+        return trace;
+    }
 
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("[code:").append(this.code).append(", message:").append(this.message).append("]");
-		return sb.toString();
-	}
+    public void setTrace(List<String> trace) {
+        this.trace = trace;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[code:").append(this.code).append(", message:").append(this.message).append("]");
+        return sb.toString();
+    }
 
 }

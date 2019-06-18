@@ -27,6 +27,11 @@ public class StandardCode {
 	 * INTERNAL_ERROR
 	 */
 	public static final int INTERNAL_ERROR = 111;
+	
+	/**
+     * FEIGN_FALLBACK
+     */
+    public static final int FEIGN_FALLBACK = 499;
 
 	/**
 	 * UNDEFINED_ERROR
