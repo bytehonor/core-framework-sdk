@@ -10,7 +10,7 @@ public class HeaderKey {
     /**
      * X-From-Terminal
      */
-    public static final String X_FROM_Uuid = "X-From-Uuid";
+    public static final String X_FROM_UUID = "X-From-Uuid";
 
     /**
      * X-Real-Ip
