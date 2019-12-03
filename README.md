@@ -1,2 +1,2 @@
-# bytehonor protocol
-server common protocol
+# define-basic-sdk
+bytehonor define
