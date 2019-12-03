@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.protocol.common.result;
+package com.bytehonor.sdk.basic.define.result;
 
 import java.util.ArrayList;
 import java.util.List;

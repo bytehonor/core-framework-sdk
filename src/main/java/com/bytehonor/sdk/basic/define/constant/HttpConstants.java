@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.protocol.common.constant;
+package com.bytehonor.sdk.basic.define.constant;
 
 public class HttpConstants {
 	

@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.protocol.common.error;
+package com.bytehonor.sdk.basic.define.error;
 
 /**
  * top exception
