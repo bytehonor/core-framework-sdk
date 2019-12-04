@@ -1,13 +1,11 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.1.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
+	id 'java-library'
 }
 
 apply from: 'repository.gradle'
 
 group = 'com.bytehonor.sdk'
-version = '3.5.7'
+version = '3.5.9'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
@@ -24,5 +22,12 @@ repositories {
 }
 
 dependencies {
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('junit:junit:4.12')
+}
+
+jar {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                   'Implementation-Version': project.version)
+    }
 }
