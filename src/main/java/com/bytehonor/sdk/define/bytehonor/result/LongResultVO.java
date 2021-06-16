@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.basic.define.result;
+package com.bytehonor.sdk.define.bytehonor.result;
 
 /**
  * @author lijianqiang
@@ -7,6 +7,10 @@ package com.bytehonor.sdk.basic.define.result;
 public class LongResultVO {
 
     private Long result;
+    
+    public static LongResultVO of(Long result) {
+        return new LongResultVO(result);
+    }
 
     public LongResultVO(Long result) {
         this.result = result;

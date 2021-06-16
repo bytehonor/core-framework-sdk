@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.basic.define.code;
+package com.bytehonor.sdk.define.bytehonor.code;
 
 /**
  * standard error code

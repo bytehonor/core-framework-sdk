@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.basic.define.constant;
+package com.bytehonor.sdk.define.bytehonor.constant;
 
 public class HttpConstants {
 	
@@ -10,7 +10,7 @@ public class HttpConstants {
 
     public static final Integer LIMIT_MAX = 200;
     
-    public static final Integer LIMIT_MAX_TOP = 5000;
+    public static final Integer LIMIT_MAX_TOP = 1000;
 
     public static final String OFFSET_KEY = "offset";
 

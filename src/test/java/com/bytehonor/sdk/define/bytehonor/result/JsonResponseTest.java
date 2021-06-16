@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.basic.define.result;
+package com.bytehonor.sdk.define.bytehonor.result;
 
 import static org.junit.Assert.assertTrue;
 

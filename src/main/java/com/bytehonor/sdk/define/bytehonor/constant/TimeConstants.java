@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.basic.define.constant;
+package com.bytehonor.sdk.define.bytehonor.constant;
 
 public class TimeConstants {
 
