@@ -1,2 +1,2 @@
-# define-basic-sdk
+# bytehonor-define-sdk
 bytehonor define
