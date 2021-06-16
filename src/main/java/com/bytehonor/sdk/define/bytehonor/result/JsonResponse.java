@@ -3,6 +3,12 @@ package com.bytehonor.sdk.define.bytehonor.result;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.bytehonor.sdk.define.bytehonor.code.StandardCode;
+import com.bytehonor.sdk.define.bytehonor.error.InternalRestfulException;
+
 /**
  * Standard Json Response
  * 
@@ -12,6 +18,8 @@ import java.util.List;
  */
 public final class JsonResponse<T> {
 
+    private static final Logger LOG = LoggerFactory.getLogger(JsonResponse.class);
+
     private Integer code;
 
     private String message;
@@ -19,6 +27,35 @@ public final class JsonResponse<T> {
     private List<String> trace = new ArrayList<String>();
 
     private T data;
+
+    public static <T> T safeGet(JsonResponse<T> response) {
+        if (response == null) {
+            throw new InternalRestfulException(StandardCode.INTERNAL_ERROR, "RESPONSE NULL");
+        }
+        if (LOG.isDebugEnabled()) {
+            LOG.debug("JsonResponse ErrorCode:{}", response.getCode());
+        }
+        if (response.getCode() != StandardCode.OK) {
+            if (LOG.isInfoEnabled()) {
+                for (String err : response.getTrace()) {
+                    LOG.info("[trace]:{}", err);
+                }
+            }
+            throw new InternalRestfulException(response.getCode(), response.getMessage());
+        }
+        T data = response.getData();
+        if (data == null) {
+            throw new InternalRestfulException(StandardCode.INTERNAL_ERROR, "RESPONSE BODY NULL");
+        }
+        return data;
+    }
+
+    public static <S> JsonResponse<S> feignFallback() {
+        JsonResponse<S> result = new JsonResponse<S>();
+        result.setCode(StandardCode.FEIGN_FALLBACK);
+        result.setMessage("远程服务不可用");
+        return result;
+    }
 
     public int getCode() {
         return code;
