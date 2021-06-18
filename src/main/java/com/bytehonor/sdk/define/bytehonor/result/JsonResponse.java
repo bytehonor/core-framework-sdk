@@ -27,11 +27,19 @@ public final class JsonResponse<T> {
     private List<String> trace = new ArrayList<String>();
 
     private T data;
-    
+
     public static <R> JsonResponse<R> success(R data) {
         JsonResponse<R> result = new JsonResponse<R>();
         result.setCode(StandardCode.OK);
         result.setMessage(StandardCode.SUCCESS);
+        result.setData(data);
+        return result;
+    }
+
+    public static <R> JsonResponse<R> error(int code, String message, R data) {
+        JsonResponse<R> result = new JsonResponse<R>();
+        result.setCode(code);
+        result.setMessage(message);
         result.setData(data);
         return result;
     }
