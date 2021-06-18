@@ -31,4 +31,12 @@ public class HeaderKey {
      * 内部请求sign md5（X_FROM_TERMINAL + X_RPC_TIME）
      */
     public static final String X_RPC_SIGN = "X-Rpc-Sign";
+
+    public static final String X_WEIXIN_OPENID = "X-Weixin-Openid";
+    
+    public static final String X_WEIXIN_UNIONID = "X-Weixin-Unionid";
+
+    public static final String X_ACCESS_TOKEN = "X-Access-Token";
+    
+    public static final String X_ACCESS_UUID = "X-Access-Uuid";
 }

@@ -27,6 +27,14 @@ public final class JsonResponse<T> {
     private List<String> trace = new ArrayList<String>();
 
     private T data;
+    
+    public static <R> JsonResponse<R> success(R data) {
+        JsonResponse<R> result = new JsonResponse<R>();
+        result.setCode(StandardCode.OK);
+        result.setMessage(StandardCode.SUCCESS);
+        result.setData(data);
+        return result;
+    }
 
     public static <T> T safeGet(JsonResponse<T> response) {
         if (response == null) {
