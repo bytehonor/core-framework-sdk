@@ -9,4 +9,6 @@ public class TimeConstants {
     public static long DAY = HOUR * 24;
 
     public static long WEEK = DAY * 7;
+    
+    public static long MONTH = DAY * 30;
 }
