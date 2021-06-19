@@ -7,6 +7,10 @@ package com.bytehonor.sdk.define.bytehonor.result;
 public class IntegerResultVO {
 
     private Integer result;
+    
+    public static IntegerResultVO of(Integer result) {
+        return new IntegerResultVO(result);
+    }
 
     public IntegerResultVO(Integer result) {
         this.result = result;

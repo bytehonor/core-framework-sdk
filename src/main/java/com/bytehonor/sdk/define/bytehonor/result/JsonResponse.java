@@ -28,6 +28,22 @@ public final class JsonResponse<T> {
 
     private T data;
 
+    public static JsonResponse<StringResultVO> ok(String data) {
+        return success(StringResultVO.of(data));
+    }
+
+    public static JsonResponse<IntegerResultVO> ok(Integer data) {
+        return success(IntegerResultVO.of(data));
+    }
+
+    public static JsonResponse<LongResultVO> ok(Long data) {
+        return success(LongResultVO.of(data));
+    }
+
+    public static JsonResponse<BooleanResultVO> ok(Boolean data) {
+        return success(BooleanResultVO.of(data));
+    }
+
     public static <R> JsonResponse<R> success(R data) {
         JsonResponse<R> result = new JsonResponse<R>();
         result.setCode(StandardCode.OK);
