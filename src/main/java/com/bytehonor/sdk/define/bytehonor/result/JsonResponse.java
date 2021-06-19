@@ -60,6 +60,10 @@ public final class JsonResponse<T> {
         return result;
     }
 
+    public static <R> JsonResponse<R> error(int code, String message) {
+        return error(code, message, null);
+    }
+
     public static <T> T safeGet(JsonResponse<T> response) {
         if (response == null) {
             throw new InternalRestfulException(StandardCode.INTERNAL_ERROR, "RESPONSE NULL");
