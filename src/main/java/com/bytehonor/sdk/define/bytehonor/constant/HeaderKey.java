@@ -38,5 +38,7 @@ public class HeaderKey {
 
     public static final String X_ACCESS_TOKEN = "X-Access-Token";
     
+    public static final String X_ACCESS_SIGN = "X-Access-Sign";
+    
     public static final String X_ACCESS_UUID = "X-Access-Uuid";
 }
