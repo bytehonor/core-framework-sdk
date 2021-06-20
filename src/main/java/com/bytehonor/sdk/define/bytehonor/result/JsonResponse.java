@@ -1,8 +1,5 @@
 package com.bytehonor.sdk.define.bytehonor.result;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,8 +20,6 @@ public final class JsonResponse<T> {
     private Integer code;
 
     private String message;
-
-    private List<String> trace = new ArrayList<String>();
 
     private T data;
 
@@ -72,11 +67,6 @@ public final class JsonResponse<T> {
             LOG.debug("JsonResponse ErrorCode:{}", response.getCode());
         }
         if (response.getCode() != StandardCode.OK) {
-            if (LOG.isInfoEnabled()) {
-                for (String err : response.getTrace()) {
-                    LOG.info("[trace]:{}", err);
-                }
-            }
             throw new InternalRestfulException(response.getCode(), response.getMessage());
         }
         T data = response.getData();
@@ -115,14 +105,6 @@ public final class JsonResponse<T> {
 
     public void setData(T data) {
         this.data = data;
-    }
-
-    public List<String> getTrace() {
-        return trace;
-    }
-
-    public void setTrace(List<String> trace) {
-        this.trace = trace;
     }
 
     @Override
