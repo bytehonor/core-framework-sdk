@@ -58,4 +58,8 @@ public class StandardCode {
      */
     public static final int UNDEFINED_ERROR = 999;
 
+    /**
+     * TOKEN_EXPIRED
+     */
+    public static final int TOKEN_EXPIRED = 1001;
 }

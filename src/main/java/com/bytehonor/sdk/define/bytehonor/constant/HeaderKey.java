@@ -22,23 +22,15 @@ public class HeaderKey {
      */
     public static final String X_FORWARDED_FOR = "X-Forwarded-For";
 
-    /**
-     * 内部请求time
-     */
-    public static final String X_RPC_TIME = "X-Rpc-Time";
-
-    /**
-     * 内部请求sign md5（X_FROM_TERMINAL + X_RPC_TIME）
-     */
-    public static final String X_RPC_SIGN = "X-Rpc-Sign";
-
     public static final String X_WEIXIN_OPENID = "X-Weixin-Openid";
-    
+
     public static final String X_WEIXIN_UNIONID = "X-Weixin-Unionid";
 
     public static final String X_ACCESS_TOKEN = "X-Access-Token";
-    
+
     public static final String X_ACCESS_SIGN = "X-Access-Sign";
-    
-    public static final String X_ACCESS_UUID = "X-Access-Uuid";
+
+    public static final String X_USER_UUID = "X-User-Uuid";
+
+    public static final String X_USER_ROLE = "X-User-Role";
 }
