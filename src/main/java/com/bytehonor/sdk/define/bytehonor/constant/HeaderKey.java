@@ -30,7 +30,7 @@ public class HeaderKey {
 
     public static final String X_ACCESS_SIGN = "X-Access-Sign";
     
-    public static final String X_ACCESS_Time = "X-Access-Time";
+    public static final String X_ACCESS_TIME = "X-Access-Time";
 
     public static final String X_USER_UUID = "X-User-Uuid";
 
