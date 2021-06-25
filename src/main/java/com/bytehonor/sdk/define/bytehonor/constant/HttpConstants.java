@@ -28,6 +28,6 @@ public class HttpConstants {
 
     public static final String PAGE_KEY = "page";
 
-    public static final String DEBUG_KEY = "debug";
+    public static final String TOKEN_KEY = "token";
 
 }
