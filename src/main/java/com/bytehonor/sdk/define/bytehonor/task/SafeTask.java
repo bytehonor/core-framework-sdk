@@ -3,6 +3,10 @@ package com.bytehonor.sdk.define.bytehonor.task;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author lijianqiang
+ *
+ */
 public abstract class SafeTask implements Runnable {
 
     private static final Logger LOG = LoggerFactory.getLogger(SafeTask.class);

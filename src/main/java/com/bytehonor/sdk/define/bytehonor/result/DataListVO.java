@@ -2,6 +2,11 @@ package com.bytehonor.sdk.define.bytehonor.result;
 
 import java.util.List;
 
+/**
+ * @author lijianqiang
+ *
+ * @param <T>
+ */
 public class DataListVO<T> {
 
     private Integer total;

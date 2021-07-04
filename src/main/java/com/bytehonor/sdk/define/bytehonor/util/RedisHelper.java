@@ -4,6 +4,10 @@ import java.util.Objects;
 
 import com.bytehonor.sdk.define.bytehonor.constant.RedisConstants;
 
+/**
+ * @author lijianqiang
+ *
+ */
 public class RedisHelper {
 
 	public static String formatKeyName(String rawKeyName) {

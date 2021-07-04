@@ -1,5 +1,9 @@
 package com.bytehonor.sdk.define.bytehonor.constant;
 
+/**
+ * @author lijianqiang
+ *
+ */
 public class HeaderKey {
 
     /**
