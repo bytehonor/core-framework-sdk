@@ -27,12 +27,6 @@ public enum OauthTerminalEnum {
 
     WEIXIN_MA_NEWS("weixin-ma-wx6606ed97cb1b17e1", "微信小程序.全网重点"),
 
-    @Deprecated
-    WEB_VUE("vue-now-ui-web", "vue.bytehonor.com的WEB端"),
-
-    @Deprecated
-    WEB_ADMIN("news-admin-web", "admin.bytehonor.comd的WEB端"),
-
     ;
 
     private String key;
