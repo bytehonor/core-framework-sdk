@@ -10,12 +10,11 @@ import com.bytehonor.sdk.define.bytehonor.constant.RedisConstants;
  */
 public class RedisHelper {
 
-	public static String formatKeyName(String rawKeyName) {
-	    Objects.requireNonNull(rawKeyName, "rawKeyName");
-		if (rawKeyName.startsWith(RedisConstants.PROJECT_PREFIX) == false) {
-			String newKeyName = new StringBuilder(RedisConstants.PROJECT_PREFIX).append(rawKeyName).toString();
-			return newKeyName;
-		}
-		return rawKeyName;
-	}
+    public static String formatKeyName(String rawKeyName) {
+        Objects.requireNonNull(rawKeyName, "rawKeyName");
+        if (rawKeyName.startsWith(RedisConstants.PROJECT_PREFIX) == false) {
+            return new StringBuilder(RedisConstants.PROJECT_PREFIX).append(rawKeyName).toString();
+        }
+        return rawKeyName;
+    }
 }

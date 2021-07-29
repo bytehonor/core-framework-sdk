@@ -19,11 +19,11 @@ public enum OauthTerminalEnum {
 
     BYTEHONOR_WEB_VUE("bytehonor.web.vue", "bytehonor.web.vue的WEB端"),
 
-    BYTEHONOR_WEB_MOBILE("bytehonor.web.m", "bytehonor.web.m的WEB端"),
+    BYTEHONOR_WEB_MOBILE("bytehonor.web.mobile", "bytehonor.web.m的WEB端"),
 
     TODAYMAIN_WEB_WWW("todaymain.web.www", "todaymain.web.www的WEB端"),
 
-    TODAYMAIN_WEB_MOBILE("todaymain.web.m", "todaymain.web.m的WEB端"),
+    TODAYMAIN_WEB_MOBILE("todaymain.web.mobile", "todaymain.web.m的WEB端"),
 
     WEIXIN_MA_NEWS("weixin-ma-wx6606ed97cb1b17e1", "微信小程序.全网重点"),
 
