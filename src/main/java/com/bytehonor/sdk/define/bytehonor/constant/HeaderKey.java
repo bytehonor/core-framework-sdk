@@ -12,11 +12,6 @@ public class HeaderKey {
     public static final String X_FROM_TERMINAL = "X-From-Terminal";
 
     /**
-     * X-From-Terminal
-     */
-    public static final String X_FROM_UUID = "X-From-Uuid";
-
-    /**
      * X-Real-Ip
      */
     public static final String X_REAL_IP = "X-Real-Ip";
@@ -36,7 +31,7 @@ public class HeaderKey {
     
     public static final String X_ACCESS_TIME = "X-Access-Time";
 
-    public static final String X_USER_UUID = "X-User-Uuid";
+    public static final String X_USER_GUID = "X-User-Guid";
 
     public static final String X_USER_ROLE = "X-User-Role";
 }
