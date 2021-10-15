@@ -24,6 +24,8 @@ public class HeaderKey {
     public static final String X_WEIXIN_OPENID = "X-Weixin-Openid";
 
     public static final String X_WEIXIN_UNIONID = "X-Weixin-Unionid";
+    
+    public static final String X_WEIXIN_APPID = "X-Weixin-Appid";
 
     public static final String X_ACCESS_TOKEN = "X-Access-Token";
 
@@ -34,4 +36,8 @@ public class HeaderKey {
     public static final String X_USER_UUID = "X-User-Uuid";
 
     public static final String X_USER_ROLE = "X-User-Role";
+    
+    public static final String X_USER_LEVEL = "X-User-Level";
+    
+    public static final String X_USER_PASSPORT = "X-User-Passport";
 }
