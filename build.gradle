@@ -5,9 +5,9 @@ plugins {
 apply from: 'repository.gradle'
 
 group = 'com.bytehonor.sdk'
-version = '1.2.4'
+version = '1.2.5'
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
+
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 configurations {
@@ -22,8 +22,8 @@ repositories {
 }
 
 dependencies {
-    implementation('org.slf4j:slf4j-api:1.7.30')
-    testImplementation('ch.qos.logback:logback-classic:1.2.3')
+    implementation('org.slf4j:slf4j-api:1.7.32')
+    testImplementation('ch.qos.logback:logback-classic:1.2.6')
 	testImplementation('junit:junit:4.12')
 }
 

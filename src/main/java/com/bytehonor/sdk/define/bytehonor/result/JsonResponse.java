@@ -76,10 +76,15 @@ public final class JsonResponse<T> {
         return data;
     }
 
-    public static <S> JsonResponse<S> feignFallback() {
+    public static <S> JsonResponse<S> fallback() {
+        return fallback(null);
+    }
+    
+    public static <S> JsonResponse<S> fallback(S data) {
         JsonResponse<S> result = new JsonResponse<S>();
         result.setCode(StandardCode.FEIGN_FALLBACK);
         result.setMessage("远程服务不可用");
+        result.setData(data);
         return result;
     }
 
