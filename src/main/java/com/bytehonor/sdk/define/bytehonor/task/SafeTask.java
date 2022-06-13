@@ -12,7 +12,7 @@ public abstract class SafeTask implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(SafeTask.class);
 
     @Override
-    public void run() {
+    public final void run() {
         if (LOG.isDebugEnabled()) {
         	LOG.debug("{} run", this.getClass().getSimpleName());
         }
