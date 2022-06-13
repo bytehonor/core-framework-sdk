@@ -24,6 +24,9 @@ public abstract class WhileTask extends SafeTask {
     }
 
     private void sleep(long millis) {
+        if (millis < 1L) {
+            return;
+        }
         try {
             Thread.sleep(millis);
         } catch (Exception e) {
