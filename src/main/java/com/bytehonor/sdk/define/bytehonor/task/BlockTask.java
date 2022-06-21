@@ -7,7 +7,7 @@ public abstract class BlockTask extends SafeTask {
 
     private static final Logger LOG = LoggerFactory.getLogger(BlockTask.class);
 
-    public abstract void runInQueue();
+    public abstract void runInQueue() throws InterruptedException;
 
     @Override
     public final void runInSafe() {
