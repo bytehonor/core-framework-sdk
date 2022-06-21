@@ -3,19 +3,19 @@ package com.bytehonor.sdk.define.bytehonor.task;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class WhileTask extends SafeTask {
+public abstract class WhileSleepTask extends SafeTask {
 
-    private static final Logger LOG = LoggerFactory.getLogger(WhileTask.class);
+    private static final Logger LOG = LoggerFactory.getLogger(WhileSleepTask.class);
 
     public abstract long millis();
 
-    public abstract void runInWhile();
+    public abstract void runThenSleep();
 
     @Override
     public final void runInSafe() {
         while (true) {
             try {
-                runInWhile();
+                runThenSleep();
             } catch (Exception e) {
                 LOG.error("runInWhile", e);
             }
