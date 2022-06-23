@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.bytehonor.result;
  * @author lijianqiang
  *
  */
-public class LongResultVO {
+public class LongData {
 
     private Long result;
     
-    public static LongResultVO of(Long result) {
-        return new LongResultVO(result);
+    public static LongData of(Long result) {
+        return new LongData(result);
     }
 
-    public LongResultVO(Long result) {
+    public LongData(Long result) {
         this.result = result;
     }
 
-    public LongResultVO() {
+    public LongData() {
         this(null);
     }
 

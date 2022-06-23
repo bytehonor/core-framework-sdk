@@ -6,23 +6,23 @@ import com.bytehonor.sdk.define.bytehonor.code.StandardCode;
  * @author lijianqiang
  *
  */
-public class StringResultVO {
+public class StringData {
 
     private String result;
 
-    public static StringResultVO ok() {
-        return new StringResultVO();
+    public static StringData ok() {
+        return new StringData();
     }
 
-    public static StringResultVO of(String result) {
-        return new StringResultVO(result);
+    public static StringData of(String result) {
+        return new StringData(result);
     }
 
-    public StringResultVO(String result) {
+    public StringData(String result) {
         this.result = result;
     }
 
-    public StringResultVO() {
+    public StringData() {
         this(StandardCode.SUCCESS);
     }
 

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.bytehonor.sdk.define.bytehonor.code.StandardCode;
-import com.bytehonor.sdk.define.bytehonor.error.InternalRestfulException;
+import com.bytehonor.sdk.define.bytehonor.exception.InternalRestfulException;
 
 /**
  * Standard Json Response
@@ -23,20 +23,20 @@ public final class JsonResponse<T> {
 
     private T data;
 
-    public static JsonResponse<StringResultVO> ok(String data) {
-        return success(StringResultVO.of(data));
+    public static JsonResponse<StringData> ok(String data) {
+        return success(StringData.of(data));
     }
 
-    public static JsonResponse<IntegerResultVO> ok(Integer data) {
-        return success(IntegerResultVO.of(data));
+    public static JsonResponse<IntegerData> ok(Integer data) {
+        return success(IntegerData.of(data));
     }
 
-    public static JsonResponse<LongResultVO> ok(Long data) {
-        return success(LongResultVO.of(data));
+    public static JsonResponse<LongData> ok(Long data) {
+        return success(LongData.of(data));
     }
 
-    public static JsonResponse<BooleanResultVO> ok(Boolean data) {
-        return success(BooleanResultVO.of(data));
+    public static JsonResponse<BooleanData> ok(Boolean data) {
+        return success(BooleanData.of(data));
     }
 
     public static <R> JsonResponse<R> success(R data) {

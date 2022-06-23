@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.bytehonor.result;
  * @author lijianqiang
  *
  */
-public class BooleanResultVO {
+public class BooleanData {
 
     private Boolean result;
 
-    public static BooleanResultVO of(Boolean result) {
-        return new BooleanResultVO(result);
+    public static BooleanData of(Boolean result) {
+        return new BooleanData(result);
     }
 
-    public BooleanResultVO(Boolean result) {
+    public BooleanData(Boolean result) {
         this.result = result;
     }
 
-    public BooleanResultVO() {
+    public BooleanData() {
         this(false);
     }
 

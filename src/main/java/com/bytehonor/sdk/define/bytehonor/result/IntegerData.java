@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.bytehonor.result;
  * @author lijianqiang
  *
  */
-public class IntegerResultVO {
+public class IntegerData {
 
     private Integer result;
     
-    public static IntegerResultVO of(Integer result) {
-        return new IntegerResultVO(result);
+    public static IntegerData of(Integer result) {
+        return new IntegerData(result);
     }
 
-    public IntegerResultVO(Integer result) {
+    public IntegerData(Integer result) {
         this.result = result;
     }
 
-    public IntegerResultVO() {
+    public IntegerData() {
         this(null);
     }
 
