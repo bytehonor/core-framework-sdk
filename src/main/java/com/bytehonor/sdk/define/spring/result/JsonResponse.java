@@ -76,6 +76,13 @@ public final class JsonResponse<T> {
         return data;
     }
 
+    public static <T> boolean isError(JsonResponse<T> response) {
+        if (response == null) {
+            return true;
+        }
+        return response.getCode() != StandardCode.OK;
+    }
+
     public static <S> JsonResponse<S> fallback() {
         return fallback(null);
     }
