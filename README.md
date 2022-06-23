@@ -1,2 +1,2 @@
-# bytehonor-define-sdk
-bytehonor define
+# spring-define-sdk
+spring-define-sdk
