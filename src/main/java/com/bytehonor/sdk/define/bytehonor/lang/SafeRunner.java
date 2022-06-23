@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.define.bytehonor.task;
+package com.bytehonor.sdk.define.bytehonor.lang;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,9 +7,9 @@ import org.slf4j.LoggerFactory;
  * @author lijianqiang
  *
  */
-public abstract class SafeTask implements Runnable {
+public abstract class SafeRunner implements Runnable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SafeTask.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SafeRunner.class);
 
     @Override
     public final void run() {
