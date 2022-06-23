@@ -7,18 +7,18 @@ import java.util.List;
  *
  * @param <T>
  */
-public class ListData<T> {
+public class DataListVO<T> {
 
     private Integer total;
 
     private List<T> list;
 
-    public static <T> ListData<T> of(List<T> list) {
+    public static <T> DataListVO<T> of(List<T> list) {
         return of(list, list != null ? list.size() : 0);
     }
 
-    public static <T> ListData<T> of(List<T> list, Integer total) {
-        ListData<T> vo = new ListData<T>();
+    public static <T> DataListVO<T> of(List<T> list, Integer total) {
+        DataListVO<T> vo = new DataListVO<T>();
         vo.setList(list);
         vo.setTotal(total);
         return vo;

@@ -6,23 +6,23 @@ import com.bytehonor.sdk.define.spring.code.StandardCode;
  * @author lijianqiang
  *
  */
-public class StringData {
+public class StringResultVO {
 
     private String result;
 
-    public static StringData ok() {
-        return new StringData();
+    public static StringResultVO ok() {
+        return new StringResultVO();
     }
 
-    public static StringData of(String result) {
-        return new StringData(result);
+    public static StringResultVO of(String result) {
+        return new StringResultVO(result);
     }
 
-    public StringData(String result) {
+    public StringResultVO(String result) {
         this.result = result;
     }
 
-    public StringData() {
+    public StringResultVO() {
         this(StandardCode.SUCCESS);
     }
 

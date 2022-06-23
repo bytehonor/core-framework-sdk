@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.spring.result;
  * @author lijianqiang
  *
  */
-public class IntegerData {
+public class IntegerResultVO {
 
     private Integer result;
     
-    public static IntegerData of(Integer result) {
-        return new IntegerData(result);
+    public static IntegerResultVO of(Integer result) {
+        return new IntegerResultVO(result);
     }
 
-    public IntegerData(Integer result) {
+    public IntegerResultVO(Integer result) {
         this.result = result;
     }
 
-    public IntegerData() {
+    public IntegerResultVO() {
         this(null);
     }
 

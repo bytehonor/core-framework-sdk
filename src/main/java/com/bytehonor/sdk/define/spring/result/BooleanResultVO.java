@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.spring.result;
  * @author lijianqiang
  *
  */
-public class BooleanData {
+public class BooleanResultVO {
 
     private Boolean result;
 
-    public static BooleanData of(Boolean result) {
-        return new BooleanData(result);
+    public static BooleanResultVO of(Boolean result) {
+        return new BooleanResultVO(result);
     }
 
-    public BooleanData(Boolean result) {
+    public BooleanResultVO(Boolean result) {
         this.result = result;
     }
 
-    public BooleanData() {
+    public BooleanResultVO() {
         this(false);
     }
 

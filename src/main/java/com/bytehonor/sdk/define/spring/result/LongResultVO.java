@@ -4,19 +4,19 @@ package com.bytehonor.sdk.define.spring.result;
  * @author lijianqiang
  *
  */
-public class LongData {
+public class LongResultVO {
 
     private Long result;
     
-    public static LongData of(Long result) {
-        return new LongData(result);
+    public static LongResultVO of(Long result) {
+        return new LongResultVO(result);
     }
 
-    public LongData(Long result) {
+    public LongResultVO(Long result) {
         this.result = result;
     }
 
-    public LongData() {
+    public LongResultVO() {
         this(null);
     }
 
