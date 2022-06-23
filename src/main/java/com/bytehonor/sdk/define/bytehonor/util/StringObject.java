@@ -1,14 +1,13 @@
 package com.bytehonor.sdk.define.bytehonor.util;
 
+import com.bytehonor.sdk.define.bytehonor.constant.CharConstants;
+import com.bytehonor.sdk.define.bytehonor.constant.StringConstants;
+
 /**
  * @author lijianqiang
  *
  */
 public class StringObject {
-
-    private static final String EMPTY = "";
-
-    private static final char UNDERLINE = '_';
 
     public static boolean isEmpty(String str) {
         return (str == null || str.isEmpty());
@@ -29,14 +28,14 @@ public class StringObject {
      */
     public static String camelToUnderline(String src) {
         if (StringObject.isEmpty(src)) {
-            return EMPTY;
+            return StringConstants.EMPTY;
         }
         int len = src.length();
         StringBuilder sb = new StringBuilder(len);
         for (int i = 0; i < len; i++) {
             char c = src.charAt(i);
             if (Character.isUpperCase(c) && i > 0) {
-                sb.append(UNDERLINE);
+                sb.append(CharConstants.UNDERLINE);
             }
             sb.append(Character.toLowerCase(c));
         }
@@ -51,14 +50,14 @@ public class StringObject {
      */
     public static String underlineToCamel(String src) {
         if (StringObject.isEmpty(src)) {
-            return EMPTY;
+            return StringConstants.EMPTY;
         }
         String temp = src.toLowerCase();
         int len = temp.length();
         StringBuilder sb = new StringBuilder(len);
         for (int i = 0; i < len; i++) {
             char c = temp.charAt(i);
-            if (c == UNDERLINE) {
+            if (c == CharConstants.UNDERLINE) {
                 if (++i < len) {
                     sb.append(Character.toUpperCase(temp.charAt(i)));
                 }

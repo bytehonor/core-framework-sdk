@@ -14,7 +14,7 @@ public class RandomUtilsTest {
 		int max = 999999;
 		boolean isOk = true;
 		for (int i=0;i<10000;i++) {
-			int src = RandomUtils.getInt(min, max);
+			int src = RandomUtils.integer(min, max);
 			boolean isFit = src > min && src < max;
 			isOk = (isFit && isOk);
 		}
@@ -26,7 +26,7 @@ public class RandomUtilsTest {
 		int len = 8;
 		boolean isOk = true;
 		for (int i=0;i<10000;i++) {
-			String src = RandomUtils.getString(len);
+			String src = RandomUtils.string(len);
 			boolean isFit = src != null && src.length() == len;
 			isOk = (isFit && isOk);
 		}

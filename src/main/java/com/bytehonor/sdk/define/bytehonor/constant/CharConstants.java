@@ -5,5 +5,7 @@ package com.bytehonor.sdk.define.bytehonor.constant;
  *
  */
 public class CharConstants {
-	public static final char BLANK = ' ';
+    public static final char BLANK = ' ';
+
+    public static final char UNDERLINE = '_';
 }

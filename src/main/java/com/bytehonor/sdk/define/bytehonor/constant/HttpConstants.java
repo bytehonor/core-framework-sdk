@@ -18,11 +18,11 @@ public class HttpConstants {
 
     public static final String OFFSET_KEY = "offset";
 
-    public static final int OFFSET_DEFAULT = 0;
+    public static final int OFFSET_DEF = 0;
 
     public static final String ORDER_KEY = "order";
 
-    public static final String ORDER_DEFAULT = "id";
+    public static final String ORDER_DEF = "id";
 
     public static final String SORT_KEY = "sort";
 
