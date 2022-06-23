@@ -1,12 +1,10 @@
-package com.bytehonor.sdk.define.bytehonor.test;
+package com.bytehonor.sdk.define.bytehonor.util;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.bytehonor.sdk.define.bytehonor.util.MD5Utils;
 
 public class MD5UtilsTest {
 

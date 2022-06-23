@@ -1,10 +1,8 @@
-package com.bytehonor.sdk.define.bytehonor.test;
+package com.bytehonor.sdk.define.bytehonor.util;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-import com.bytehonor.sdk.define.bytehonor.util.LongIdUtils;
 
 public class LongIdUtilsTest {
 
