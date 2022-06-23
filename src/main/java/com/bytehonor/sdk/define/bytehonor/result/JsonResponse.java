@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.bytehonor.sdk.define.bytehonor.code.StandardCode;
-import com.bytehonor.sdk.define.bytehonor.exception.InternalRestfulException;
+import com.bytehonor.sdk.define.bytehonor.exception.ResponseException;
 
 /**
  * Standard Json Response
@@ -61,17 +61,17 @@ public final class JsonResponse<T> {
 
     public static <T> T safeGet(JsonResponse<T> response) {
         if (response == null) {
-            throw new InternalRestfulException(StandardCode.INTERNAL_ERROR, "RESPONSE NULL");
+            throw new ResponseException("RESPONSE NULL");
         }
         if (LOG.isDebugEnabled()) {
             LOG.debug("JsonResponse ErrorCode:{}", response.getCode());
         }
         if (response.getCode() != StandardCode.OK) {
-            throw new InternalRestfulException(response.getCode(), response.getMessage());
+            throw new ResponseException(response.toString());
         }
         T data = response.getData();
         if (data == null) {
-            throw new InternalRestfulException(StandardCode.INTERNAL_ERROR, "RESPONSE BODY NULL");
+            throw new ResponseException("RESPONSE BODY NULL");
         }
         return data;
     }
@@ -79,7 +79,7 @@ public final class JsonResponse<T> {
     public static <S> JsonResponse<S> fallback() {
         return fallback(null);
     }
-    
+
     public static <S> JsonResponse<S> fallback(S data) {
         JsonResponse<S> result = new JsonResponse<S>();
         result.setCode(StandardCode.FEIGN_FALLBACK);
