@@ -2,7 +2,6 @@ package com.bytehonor.sdk.define.spring.query;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class MatchColumnGroup {
 
@@ -16,11 +15,15 @@ public class MatchColumnGroup {
         return new MatchColumnGroup();
     }
 
-    public MatchColumnGroup add(MatchColumn column) {
-        Objects.requireNonNull(column, "column");
-        Objects.requireNonNull(column.getOperator(), "operator");
+    public static boolean accept(MatchColumn column) {
+        if (column == null) {
+            return false;
+        }
+        return column.getOperator() != null && column.getKey() != null && column.getValue() != null;
+    }
 
-        if (column.getKey() != null && column.getValue() != null) {
+    public MatchColumnGroup safeAdd(MatchColumn column) {
+        if (accept(column)) {
             this.columns.add(column);
         }
         return this;

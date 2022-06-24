@@ -9,6 +9,9 @@ public class MatchColumn {
 
     private String key;
 
+    /**
+     * String Long Integer Boolean Collection
+     */
     private Object value;
 
     /**
