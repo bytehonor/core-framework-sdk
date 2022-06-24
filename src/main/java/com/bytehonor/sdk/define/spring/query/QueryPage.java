@@ -20,10 +20,10 @@ public class QueryPage {
     }
 
     public static QueryPage of(int offset, int limit) {
-        QueryPage page = new QueryPage();
-        page.setOffset(offset > -1 ? offset : HttpConstants.OFFSET_DEF);
-        page.setLimit(limit);
-        return page;
+        QueryPage model = new QueryPage();
+        model.setOffset(offset > -1 ? offset : HttpConstants.OFFSET_DEF);
+        model.setLimit(limit);
+        return model;
     }
 
     public int getOffset() {
