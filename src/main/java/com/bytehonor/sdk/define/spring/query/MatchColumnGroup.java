@@ -15,15 +15,8 @@ public class MatchColumnGroup {
         return new MatchColumnGroup();
     }
 
-    public static boolean accept(MatchColumn column) {
-        if (column == null) {
-            return false;
-        }
-        return column.getOperator() != null && column.getKey() != null && column.getValue() != null;
-    }
-
     public MatchColumnGroup safeAdd(MatchColumn column) {
-        if (accept(column)) {
+        if (MatchColumn.accept(column)) {
             this.columns.add(column);
         }
         return this;

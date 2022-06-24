@@ -5,21 +5,35 @@ import java.util.Collection;
 import com.bytehonor.sdk.define.spring.constant.JavaValueTypes;
 import com.bytehonor.sdk.define.spring.constant.SqlOperator;
 
+/**
+ * @author lijianqiang
+ *
+ */
 public class MatchColumn {
 
-    private String key;
+    /**
+     * 忽略驼峰及下划线风格
+     */
+    private final String key;
 
     /**
      * String Long Integer Boolean Collection
      */
-    private Object value;
+    private final Object value;
 
     /**
      * java type
      */
-    private String type;
+    private final String type;
 
-    private SqlOperator operator;
+    private final SqlOperator operator;
+
+    public static boolean accept(MatchColumn column) {
+        if (column == null) {
+            return false;
+        }
+        return column.getOperator() != null && column.getKey() != null && column.getValue() != null;
+    }
 
     /**
      * 
@@ -272,32 +286,16 @@ public class MatchColumn {
         return key;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
     public Object getValue() {
         return value;
-    }
-
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
-    public SqlOperator getOperator() {
-        return operator;
-    }
-
-    public void setOperator(SqlOperator operator) {
-        this.operator = operator;
     }
 
     public String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public SqlOperator getOperator() {
+        return operator;
     }
 
 }
