@@ -21,9 +21,29 @@ public class DateConstants {
 
     public final static DateTimeFormatter YYYYMMDD_HHMMSS = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss", CN);
 
-    public final static DateTimeFormatter YYYYMMDD_HHMMSSZ = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z", CN);
-
     public final static DateTimeFormatter CN_YYYYMMDD = DateTimeFormatter.ofPattern("yyyy年MM月dd日", CN);
 
-    public final static DateTimeFormatter CN_YYYYMMDD_HHMM = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH时mm", CN);
+    public final static DateTimeFormatter CN_YYYYMMDD_HH = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH时", CN);
+
+    public final static DateTimeFormatter CN_YYYYMMDD_HHMM = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH时mm分", CN);
+
+    public final static DateTimeFormatter CN_YYYYMMDD_HHMMSS = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH时mm分ss秒", CN);
+
+    public final static DateTimeFormatter CN_YYYYMMDDHH = DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时", CN);
+
+    public final static DateTimeFormatter CN_YYYYMMDDHHMM = DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时mm分", CN);
+
+    public final static DateTimeFormatter CN_YYYYMMDDHHMMSS = DateTimeFormatter.ofPattern("yyyy年MM月dd日HH时mm分ss秒", CN);
+
+    public final static DateTimeFormatter CN_MMDDHH = DateTimeFormatter.ofPattern("MM月dd日HH时", CN);
+
+    public final static DateTimeFormatter CN_MMDDHHMM = DateTimeFormatter.ofPattern("MM月dd日HH时mm分", CN);
+
+    public final static DateTimeFormatter CN_MMDDHHMMSS = DateTimeFormatter.ofPattern("MM月dd日HH时mm分ss秒", CN);
+
+    public final static DateTimeFormatter CN_MDHH = DateTimeFormatter.ofPattern("M月d日HH时", CN);
+
+    public final static DateTimeFormatter CN_MDHHMM = DateTimeFormatter.ofPattern("M月d日HH时mm分", CN);
+
+    public final static DateTimeFormatter CN_MDHHMMSS = DateTimeFormatter.ofPattern("M月d日HH时mm分ss秒", CN);
 }
