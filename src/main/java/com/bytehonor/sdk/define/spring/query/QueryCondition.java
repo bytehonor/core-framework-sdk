@@ -21,13 +21,13 @@ public final class QueryCondition {
 
     private QueryOrder order;
 
-    private final MatchColumnGroup group;
+    private final KeyMatcherGroup group;
 
     private QueryCondition(QueryLogic logic, QueryPage page) {
         this.logic = logic;
         this.page = page;
         this.order = null;
-        this.group = MatchColumnGroup.create();
+        this.group = KeyMatcherGroup.create();
     }
 
     public static QueryCondition one() {
@@ -57,8 +57,8 @@ public final class QueryCondition {
         return new QueryCondition(logic, page);
     }
 
-    private QueryCondition safeAdd(MatchColumn column) {
-        group.safeAdd(column);
+    private QueryCondition safeAdd(KeyMatcher matcher) {
+        group.safeAdd(matcher);
         return this;
     }
 
@@ -70,7 +70,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition eq(String key, String value) {
-        return this.safeAdd(MatchColumn.eq(key, value));
+        return this.safeAdd(KeyMatcher.eq(key, value));
     }
 
     /**
@@ -81,7 +81,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition eq(String key, Long value) {
-        return this.safeAdd(MatchColumn.eq(key, value));
+        return this.safeAdd(KeyMatcher.eq(key, value));
     }
 
     /**
@@ -92,7 +92,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition eq(String key, Integer value) {
-        return this.safeAdd(MatchColumn.eq(key, value));
+        return this.safeAdd(KeyMatcher.eq(key, value));
     }
 
     /**
@@ -103,7 +103,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition eq(String key, Boolean value) {
-        return this.safeAdd(MatchColumn.eq(key, value));
+        return this.safeAdd(KeyMatcher.eq(key, value));
     }
 
     /**
@@ -114,7 +114,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition neq(String key, String value) {
-        return this.safeAdd(MatchColumn.neq(key, value));
+        return this.safeAdd(KeyMatcher.neq(key, value));
     }
 
     /**
@@ -125,7 +125,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition neq(String key, Long value) {
-        return this.safeAdd(MatchColumn.neq(key, value));
+        return this.safeAdd(KeyMatcher.neq(key, value));
     }
 
     /**
@@ -136,7 +136,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition neq(String key, Integer value) {
-        return this.safeAdd(MatchColumn.neq(key, value));
+        return this.safeAdd(KeyMatcher.neq(key, value));
     }
 
     /**
@@ -147,7 +147,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition neq(String key, Boolean value) {
-        return this.safeAdd(MatchColumn.neq(key, value));
+        return this.safeAdd(KeyMatcher.neq(key, value));
     }
 
     /**
@@ -158,7 +158,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition gt(String key, Long value) {
-        return this.safeAdd(MatchColumn.gt(key, value));
+        return this.safeAdd(KeyMatcher.gt(key, value));
     }
 
     /**
@@ -169,7 +169,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition gt(String key, Integer value) {
-        return this.safeAdd(MatchColumn.gt(key, value));
+        return this.safeAdd(KeyMatcher.gt(key, value));
     }
 
     /**
@@ -180,7 +180,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition egt(String key, Long value) {
-        return this.safeAdd(MatchColumn.egt(key, value));
+        return this.safeAdd(KeyMatcher.egt(key, value));
     }
 
     /**
@@ -191,7 +191,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition egt(String key, Integer value) {
-        return this.safeAdd(MatchColumn.egt(key, value));
+        return this.safeAdd(KeyMatcher.egt(key, value));
     }
 
     /**
@@ -202,7 +202,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition lt(String key, Long value) {
-        return this.safeAdd(MatchColumn.lt(key, value));
+        return this.safeAdd(KeyMatcher.lt(key, value));
     }
 
     /**
@@ -213,7 +213,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition lt(String key, Integer value) {
-        return this.safeAdd(MatchColumn.lt(key, value));
+        return this.safeAdd(KeyMatcher.lt(key, value));
     }
 
     /**
@@ -224,7 +224,7 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition elt(String key, Long value) {
-        return this.safeAdd(MatchColumn.elt(key, value));
+        return this.safeAdd(KeyMatcher.elt(key, value));
     }
 
     /**
@@ -235,31 +235,31 @@ public final class QueryCondition {
      * @return
      */
     public QueryCondition elt(String key, Integer value) {
-        return this.safeAdd(MatchColumn.elt(key, value));
+        return this.safeAdd(KeyMatcher.elt(key, value));
     }
 
     public QueryCondition like(String key, String value) {
-        return this.safeAdd(MatchColumn.like(key, value));
+        return this.safeAdd(KeyMatcher.like(key, value));
     }
 
     public QueryCondition likeLeft(String key, String value) {
-        return this.safeAdd(MatchColumn.likeLeft(key, value));
+        return this.safeAdd(KeyMatcher.likeLeft(key, value));
     }
 
     public QueryCondition likeRight(String key, String value) {
-        return this.safeAdd(MatchColumn.likeRight(key, value));
+        return this.safeAdd(KeyMatcher.likeRight(key, value));
     }
 
     public QueryCondition strings(String key, Collection<String> value) {
-        return this.safeAdd(MatchColumn.strings(key, value));
+        return this.safeAdd(KeyMatcher.strings(key, value));
     }
 
     public QueryCondition longs(String key, Collection<Long> value) {
-        return this.safeAdd(MatchColumn.longs(key, value));
+        return this.safeAdd(KeyMatcher.longs(key, value));
     }
 
     public QueryCondition integers(String key, Collection<Integer> value) {
-        return this.safeAdd(MatchColumn.integers(key, value));
+        return this.safeAdd(KeyMatcher.integers(key, value));
     }
 
     public QueryCondition descBy(String key) {
@@ -296,7 +296,7 @@ public final class QueryCondition {
         return logic;
     }
 
-    public MatchColumnGroup getGroup() {
+    public KeyMatcherGroup getGroup() {
         return group;
     }
 
