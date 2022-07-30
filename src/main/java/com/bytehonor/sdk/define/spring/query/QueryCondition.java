@@ -1,6 +1,8 @@
 package com.bytehonor.sdk.define.spring.query;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 import com.bytehonor.sdk.define.spring.constant.HttpConstants;
@@ -21,13 +23,13 @@ public final class QueryCondition {
 
     private QueryOrder order;
 
-    private final KeyMatcherGroup group;
+    private final List<KeyMatcher> matchers;
 
     private QueryCondition(QueryLogic logic, QueryPage page) {
         this.logic = logic;
         this.page = page;
         this.order = null;
-        this.group = KeyMatcherGroup.create();
+        this.matchers = new ArrayList<KeyMatcher>();
     }
 
     public static QueryCondition one() {
@@ -58,7 +60,9 @@ public final class QueryCondition {
     }
 
     private QueryCondition safeAdd(KeyMatcher matcher) {
-        group.safeAdd(matcher);
+        if (KeyMatcher.accept(matcher)) {
+            this.matchers.add(matcher);
+        }
         return this;
     }
 
@@ -296,8 +300,8 @@ public final class QueryCondition {
         return logic;
     }
 
-    public KeyMatcherGroup getGroup() {
-        return group;
+    public List<KeyMatcher> getMatchers() {
+        return matchers;
     }
 
 }
