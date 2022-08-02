@@ -2,13 +2,13 @@ package com.bytehonor.sdk.define.spring.constant;
 
 public class JavaValueTypes {
 
-    public static String STRING = String.class.getName();
+    public static final String STRING = String.class.getName();
 
-    public static String LONG = Long.class.getName();
+    public static final String LONG = Long.class.getName();
 
-    public static String INTEGER = Integer.class.getName();
+    public static final String INTEGER = Integer.class.getName();
 
-    public static String BOOLEAN = Boolean.class.getName();
+    public static final String BOOLEAN = Boolean.class.getName();
 
-    public static String DOUBLE = Double.class.getName();
+    public static final String DOUBLE = Double.class.getName();
 }
