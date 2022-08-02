@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 import com.bytehonor.sdk.define.spring.code.StandardCode;
 
@@ -6,23 +6,23 @@ import com.bytehonor.sdk.define.spring.code.StandardCode;
  * @author lijianqiang
  *
  */
-public class StringResultVO {
+public class DataString {
 
     private String result;
 
-    public static StringResultVO ok() {
-        return new StringResultVO();
+    public static DataString ok() {
+        return new DataString();
     }
 
-    public static StringResultVO of(String result) {
-        return new StringResultVO(result);
+    public static DataString of(String result) {
+        return new DataString(result);
     }
 
-    public StringResultVO(String result) {
+    public DataString(String result) {
         this.result = result;
     }
 
-    public StringResultVO() {
+    public DataString() {
         this(StandardCode.SUCCESS);
     }
 

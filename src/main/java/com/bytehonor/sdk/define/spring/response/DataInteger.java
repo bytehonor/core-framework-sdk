@@ -1,22 +1,22 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 /**
  * @author lijianqiang
  *
  */
-public class IntegerResultVO {
+public class DataInteger {
 
     private Integer result;
     
-    public static IntegerResultVO of(Integer result) {
-        return new IntegerResultVO(result);
+    public static DataInteger of(Integer result) {
+        return new DataInteger(result);
     }
 
-    public IntegerResultVO(Integer result) {
+    public DataInteger(Integer result) {
         this.result = result;
     }
 
-    public IntegerResultVO() {
+    public DataInteger() {
         this(null);
     }
 

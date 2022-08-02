@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,20 +23,20 @@ public final class JsonResponse<T> {
 
     private T data;
 
-    public static JsonResponse<StringResultVO> ok(String data) {
-        return success(StringResultVO.of(data));
+    public static JsonResponse<DataString> ok(String data) {
+        return success(DataString.of(data));
     }
 
-    public static JsonResponse<IntegerResultVO> ok(Integer data) {
-        return success(IntegerResultVO.of(data));
+    public static JsonResponse<DataInteger> ok(Integer data) {
+        return success(DataInteger.of(data));
     }
 
-    public static JsonResponse<LongResultVO> ok(Long data) {
-        return success(LongResultVO.of(data));
+    public static JsonResponse<DataLong> ok(Long data) {
+        return success(DataLong.of(data));
     }
 
-    public static JsonResponse<BooleanResultVO> ok(Boolean data) {
-        return success(BooleanResultVO.of(data));
+    public static JsonResponse<DataBoolean> ok(Boolean data) {
+        return success(DataBoolean.of(data));
     }
 
     public static <R> JsonResponse<R> success(R data) {

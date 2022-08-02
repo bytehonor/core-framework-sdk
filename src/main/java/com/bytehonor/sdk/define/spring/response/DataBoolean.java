@@ -1,22 +1,22 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 /**
  * @author lijianqiang
  *
  */
-public class BooleanResultVO {
+public class DataBoolean {
 
     private Boolean result;
 
-    public static BooleanResultVO of(Boolean result) {
-        return new BooleanResultVO(result);
+    public static DataBoolean of(Boolean result) {
+        return new DataBoolean(result);
     }
 
-    public BooleanResultVO(Boolean result) {
+    public DataBoolean(Boolean result) {
         this.result = result;
     }
 
-    public BooleanResultVO() {
+    public DataBoolean() {
         this(false);
     }
 

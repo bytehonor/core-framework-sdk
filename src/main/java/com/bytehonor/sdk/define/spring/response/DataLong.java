@@ -1,22 +1,22 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 /**
  * @author lijianqiang
  *
  */
-public class LongResultVO {
+public class DataLong {
 
     private Long result;
-    
-    public static LongResultVO of(Long result) {
-        return new LongResultVO(result);
+
+    public static DataLong of(Long result) {
+        return new DataLong(result);
     }
 
-    public LongResultVO(Long result) {
+    public DataLong(Long result) {
         this.result = result;
     }
 
-    public LongResultVO() {
+    public DataLong() {
         this(null);
     }
 

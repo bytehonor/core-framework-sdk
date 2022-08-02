@@ -4,6 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.bytehonor.sdk.define.spring.response.JsonResponse;
+
 public class JsonResponseTest {
 
 	@Test

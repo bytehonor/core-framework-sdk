@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.define.spring.result;
+package com.bytehonor.sdk.define.spring.response;
 
 import java.util.List;
 
@@ -7,18 +7,18 @@ import java.util.List;
  *
  * @param <T>
  */
-public class DataListVO<T> {
+public class DataList<T> {
 
     private Integer total;
 
     private List<T> list;
 
-    public static <T> DataListVO<T> of(List<T> list) {
+    public static <T> DataList<T> of(List<T> list) {
         return of(list, list != null ? list.size() : 0);
     }
 
-    public static <T> DataListVO<T> of(List<T> list, Integer total) {
-        DataListVO<T> vo = new DataListVO<T>();
+    public static <T> DataList<T> of(List<T> list, Integer total) {
+        DataList<T> vo = new DataList<T>();
         vo.setList(list);
         vo.setTotal(total);
         return vo;
