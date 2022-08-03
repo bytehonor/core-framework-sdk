@@ -1,35 +1,34 @@
 package com.bytehonor.sdk.define.spring.exception;
 
 /**
- * top exception
  * 
  * @author lijianqiang
  *
  */
 public class StandardException extends RuntimeException {
 
-	private static final long serialVersionUID = -183184291876365329L;
+    private static final long serialVersionUID = -183184291876365329L;
 
-	/**
-	 * error code
-	 */
-	private int code;
+    /**
+     * error code
+     */
+    private int code;
 
-	public StandardException() {
-		super();
-	}
+    public StandardException() {
+        super();
+    }
 
-	public StandardException(int code, String message) {
-		super(message);
-		this.code = code;
-	}
+    public StandardException(int code, String message) {
+        super(message);
+        this.code = code;
+    }
 
-	public int getCode() {
-		return code;
-	}
+    public int getCode() {
+        return code;
+    }
 
-	public void setCode(int code) {
-		this.code = code;
-	}
+    public void setCode(int code) {
+        this.code = code;
+    }
 
 }

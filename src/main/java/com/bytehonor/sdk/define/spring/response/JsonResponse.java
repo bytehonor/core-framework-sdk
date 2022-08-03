@@ -1,21 +1,20 @@
 package com.bytehonor.sdk.define.spring.response;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.io.Serializable;
 
 import com.bytehonor.sdk.define.spring.code.StandardCode;
 import com.bytehonor.sdk.define.spring.exception.ResponseException;
 
 /**
- * Standard Json Response
+ * Json Response
  * 
  * @author lijianqiang
  *
  * @param <T>
  */
-public final class JsonResponse<T> {
+public final class JsonResponse<T> implements Serializable {
 
-    private static final Logger LOG = LoggerFactory.getLogger(JsonResponse.class);
+    private static final long serialVersionUID = 2464992888381774481L;
 
     private Integer code;
 
@@ -62,9 +61,6 @@ public final class JsonResponse<T> {
     public static <T> T safeGet(JsonResponse<T> response) {
         if (response == null) {
             throw new ResponseException("RESPONSE NULL");
-        }
-        if (LOG.isDebugEnabled()) {
-            LOG.debug("JsonResponse ErrorCode:{}", response.getCode());
         }
         if (response.getCode() != StandardCode.OK) {
             throw new ResponseException(response.toString());

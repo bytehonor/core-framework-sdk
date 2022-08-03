@@ -1,12 +1,16 @@
 package com.bytehonor.sdk.define.spring.response;
 
+import java.io.Serializable;
+
 import com.bytehonor.sdk.define.spring.code.StandardCode;
 
 /**
  * @author lijianqiang
  *
  */
-public class DataString {
+public class DataString implements Serializable {
+
+    private static final long serialVersionUID = -2026720210560037542L;
 
     private String result;
 

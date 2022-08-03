@@ -1,5 +1,6 @@
 package com.bytehonor.sdk.define.spring.response;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,9 @@ import java.util.List;
  *
  * @param <T>
  */
-public class DataList<T> {
+public class DataList<T> implements Serializable {
+
+    private static final long serialVersionUID = -3569067658999958726L;
 
     private Integer total;
 

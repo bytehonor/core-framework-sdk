@@ -1,10 +1,14 @@
 package com.bytehonor.sdk.define.spring.response;
 
+import java.io.Serializable;
+
 /**
  * @author lijianqiang
  *
  */
-public class DataAccept {
+public class DataAccept implements Serializable {
+
+    private static final long serialVersionUID = 3133545192736146299L;
 
     private String server;
 

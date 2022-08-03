@@ -1,13 +1,17 @@
 package com.bytehonor.sdk.define.spring.response;
 
+import java.io.Serializable;
+
 /**
  * @author lijianqiang
  *
  */
-public class DataInteger {
+public class DataInteger implements Serializable {
+
+    private static final long serialVersionUID = -3592186356812066966L;
 
     private Integer result;
-    
+
     public static DataInteger of(Integer result) {
         return new DataInteger(result);
     }

@@ -1,10 +1,14 @@
 package com.bytehonor.sdk.define.spring.response;
 
+import java.io.Serializable;
+
 /**
  * @author lijianqiang
  *
  */
-public class DataBoolean {
+public class DataBoolean implements Serializable {
+
+    private static final long serialVersionUID = 8002495835746801370L;
 
     private Boolean result;
 
