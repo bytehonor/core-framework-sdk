@@ -1,6 +1,6 @@
 package com.bytehonor.sdk.define.spring.constant;
 
-public class OauthConstant {
+public class OauthConstants {
 
     public static final String NO_AUTH = ".do";
 
