@@ -18,6 +18,12 @@ public class DefineService {
     public static final String CRYPTO_MONITOR_SERVER = "crypto-monitor-server";
 
     public static final String CRYPTO_PROXY_SERVER = "crypto-proxy-server";
+    
+    public static final String CRYPTO_EXCHANGE_SERVER = "crypto-exchange-server";
+    
+    public static final String CRYPTO_BRIDGE_SERVER = "crypto-bridge-server";
+    
+    public static final String CRYPTO_MARKET_SERVER = "crypto-market-server";
 
     public static final String MEDIA_MONITOR_SERVER = "media-monitor-server";
 
@@ -29,4 +35,5 @@ public class DefineService {
 
     public static final String USER_CENTER_SERVER = "user-center-server";
 
+    
 }
