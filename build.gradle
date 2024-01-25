@@ -5,16 +5,13 @@ plugins {
 
 
 group = 'com.bytehonor.sdk'
-version = '0.3.10'
+version = '0.3.11'
 sourceCompatibility = 1.8
 
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
 configurations {
 	developmentOnly
-	runtimeClasspath {
-		extendsFrom developmentOnly
-	}
 }
 
 repositories {
