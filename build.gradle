@@ -3,10 +3,8 @@ plugins {
 	id 'maven-publish'
 }
 
-
 group = 'com.bytehonor.sdk'
-version = '0.3.13'
-sourceCompatibility = 1.8
+version = '0.3.14'
 
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 
@@ -32,6 +30,7 @@ jar {
 }
 
 java {
+    sourceCompatibility = 1.8
     withSourcesJar()
 }
 
