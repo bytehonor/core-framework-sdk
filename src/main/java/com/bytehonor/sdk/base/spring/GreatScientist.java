@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.define.spring;
+package com.bytehonor.sdk.base.spring;
 
 /**
  * 20221221

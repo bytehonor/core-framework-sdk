@@ -1,9 +1,9 @@
-package com.bytehonor.sdk.define.spring.response;
+package com.bytehonor.sdk.base.spring.response;
 
 import java.io.Serializable;
 
-import com.bytehonor.sdk.define.spring.code.StandardCode;
-import com.bytehonor.sdk.define.spring.exception.ResponseException;
+import com.bytehonor.sdk.base.spring.code.StandardCode;
+import com.bytehonor.sdk.base.spring.exception.ResponseException;
 
 /**
  * Json Response

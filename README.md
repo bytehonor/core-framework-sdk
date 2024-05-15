@@ -1,4 +1,2 @@
-# spring-define-sdk
-spring-define-sdk
-
-定义bytehonor的约束
+# spring-base-sdk
+spring-base-sdk
