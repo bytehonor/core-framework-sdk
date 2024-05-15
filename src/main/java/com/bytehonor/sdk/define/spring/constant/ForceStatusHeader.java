@@ -6,6 +6,7 @@ package com.bytehonor.sdk.define.spring.constant;
  * @author lijianqiang
  *
  */
+@Deprecated
 public class ForceStatusHeader {
 
 	/**

@@ -11,7 +11,7 @@ public class GreatScientist {
     /**
      * 阿伏伽德罗（Amedeo Avogadro、1776年8月9日－1856年7月9日）
      */
-    public static final String AVOGADRO = "Avogadro";
+    public static final String AVOGADRO = "avogadro";
 
     /**
      * 安德烈·玛丽·安培（André-Marie Ampère，1775年1月20日 — 1836年6月10日）
