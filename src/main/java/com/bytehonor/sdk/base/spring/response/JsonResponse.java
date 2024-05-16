@@ -38,15 +38,7 @@ public final class JsonResponse<T> implements Serializable {
         return success(DataBoolean.of(data));
     }
 
-    public static <R> JsonResponse<R> success(R data) {
-        JsonResponse<R> result = new JsonResponse<R>();
-        result.setCode(StandardCode.OK);
-        result.setMessage(StandardCode.SUCCESS);
-        result.setData(data);
-        return result;
-    }
-
-    public static <R> JsonResponse<R> error(int code, String message, R data) {
+    public static <R> JsonResponse<R> build(int code, String message, R data) {
         JsonResponse<R> result = new JsonResponse<R>();
         result.setCode(code);
         result.setMessage(message);
@@ -54,8 +46,12 @@ public final class JsonResponse<T> implements Serializable {
         return result;
     }
 
+    public static <R> JsonResponse<R> success(R data) {
+        return build(StandardCode.OK, StandardCode.SUCCESS, data);
+    }
+
     public static <R> JsonResponse<R> error(int code, String message) {
-        return error(code, message, null);
+        return build(code, message, null);
     }
 
     public static <T> T safeGet(JsonResponse<T> response) {
@@ -70,6 +66,26 @@ public final class JsonResponse<T> implements Serializable {
             throw new ResponseException("RESPONSE BODY NULL");
         }
         return data;
+    }
+
+    public static String dataString(JsonResponse<DataString> response) {
+        DataString ds = safeGet(response);
+        return ds.getResult();
+    }
+
+    public static Long dataLong(JsonResponse<DataLong> response) {
+        DataLong data = safeGet(response);
+        return data.getResult();
+    }
+
+    public static Integer dataInteger(JsonResponse<DataInteger> response) {
+        DataInteger data = safeGet(response);
+        return data.getResult();
+    }
+
+    public static Boolean dataBoolean(JsonResponse<DataBoolean> response) {
+        DataBoolean data = safeGet(response);
+        return data.getResult();
     }
 
     public static <T> boolean isError(JsonResponse<T> response) {
