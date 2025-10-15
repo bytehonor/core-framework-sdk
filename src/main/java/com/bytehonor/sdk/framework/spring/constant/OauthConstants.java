@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.base.spring.constant;
+package com.bytehonor.sdk.framework.spring.constant;
 
 public class OauthConstants {
 
