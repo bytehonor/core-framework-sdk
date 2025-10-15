@@ -1,2 +1,2 @@
-# spring-base-sdk
-spring-base-sdk
+# spring-framework-sdk
+spring-framework-sdk
