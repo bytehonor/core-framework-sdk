@@ -1,8 +1,8 @@
-package com.bytehonor.sdk.framework.spring.response;
+package com.bytehonor.sdk.framework.core.response;
 
 import java.io.Serializable;
 
-import com.bytehonor.sdk.framework.spring.code.StandardCode;
+import com.bytehonor.sdk.framework.core.code.StandardCode;
 
 /**
  * @author lijianqiang

@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.framework.spring.exception;
+package com.bytehonor.sdk.framework.core.exception;
 
 public class ResponseException extends RuntimeException {
 
