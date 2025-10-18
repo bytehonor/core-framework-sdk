@@ -1,4 +1,4 @@
-package com.bytehonor.sdk.framework.core.exception;
+package com.bytehonor.sdk.concept.spring.exception;
 
 /**
  * 
